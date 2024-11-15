@@ -6,12 +6,10 @@ import com.epam.utils.StringUtils;
 
 public class Utils {
     public static boolean isAllPositiveNumbers(List<String> args) {
-        Boolean isNegativeAbsent = true;
-
         for(String s : args){
-            if(!StringUtils.isPositiveNumber(s)) isNegativeAbsent = false;
+            if(!StringUtils.isPositiveNumber(s)) return false;
         }
 
-        return isNegativeAbsent;
+        return true;
     }
 }

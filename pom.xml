@@ -2,12 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>com.epam</groupId>
     <artifactId>stage-2-module-1-build-tools-maven</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.3.5</version>
+
     <modules>
         <module>utils</module>
         <module>demo</module>
@@ -15,7 +17,10 @@
 
     <properties>
         <junit.version>5.8.1</junit.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -26,19 +31,18 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <build>
         <plugins>
             <plugin>
-                <artifactId>maven-myquery-plugin</artifactId>
-                <version>1.0</version>
+                <artifactId>utils</artifactId>
+                <version>1.3.5</version>
                 <configuration>
-                <url>http://www.foobar.com/query</url>
-                <timeout>10</timeout>
-                <options>
-                    <option>one</option>
-                    <option>two</option>
-                    <option>three</option>
-                </options>
+                    <file>utils-1.3.5</file>
+                    <groupId>com.epam.utils</groupId>
+                    <artifactId>utils</artifactId>
+                    <version>1.3.5</version>
+                    <packaging>jar</packaging>
                 </configuration>
             </plugin>
         </plugins>
