@@ -35,7 +35,7 @@
                 <version>1.3.5</version>
                 <configuration>
                     <file>utils-1.3.5</file>
-                    <groupId>com.epam.utils</groupId>
+                    <groupId>com.epam</groupId>
                     <artifactId>utils</artifactId>
                     <version>1.3.5</version>
                     <packaging>jar</packaging>
